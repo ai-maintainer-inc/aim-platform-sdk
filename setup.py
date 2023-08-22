@@ -11,7 +11,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "marketplace_sdk"
+NAME = "agent_marketplace_sdk"
 VERSION = "0.1.0"
 # To install the library, run the following
 #
