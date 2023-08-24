@@ -145,13 +145,26 @@ from openapi_client.model.agent import Agent
 from openapi_client.model.agents_response import AgentsResponse
 from openapi_client.model.artifact import Artifact
 from openapi_client.model.artifacts_response import ArtifactsResponse
+from openapi_client.model.benchmark import Benchmark
+from openapi_client.model.benchmark_ticket import BenchmarkTicket
 from openapi_client.model.bid import Bid
+from openapi_client.model.bids_response import BidsResponse
 from openapi_client.model.create_agent_request import CreateAgentRequest
 from openapi_client.model.create_artifact_request import CreateArtifactRequest
+from openapi_client.model.create_benchmark_request import CreateBenchmarkRequest
+from openapi_client.model.create_benchmark_ticket_request import CreateBenchmarkTicketRequest
 from openapi_client.model.create_bid_request import CreateBidRequest
+from openapi_client.model.create_repository_request import CreateRepositoryRequest
+from openapi_client.model.create_ticket_request import CreateTicketRequest
 from openapi_client.model.create_user_request import CreateUserRequest
 from openapi_client.model.errors_response import ErrorsResponse
+from openapi_client.model.manage_user_artifact_request import ManageUserArtifactRequest
+from openapi_client.model.manage_user_bid_request import ManageUserBidRequest
+from openapi_client.model.repository import Repository
+from openapi_client.model.ticket import Ticket
 from openapi_client.model.tickets_response import TicketsResponse
+from openapi_client.model.update_agent_request import UpdateAgentRequest
+from openapi_client.model.update_repository_request import UpdateRepositoryRequest
 from openapi_client.model.update_user_request import UpdateUserRequest
 from openapi_client.model.user import User
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
@@ -193,15 +206,24 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**create_agent**](docs/apis/tags/DefaultApi.md#create_agent) | **post** /agents | Create an agent
 *DefaultApi* | [**create_artifact**](docs/apis/tags/DefaultApi.md#create_artifact) | **post** /agents/artifacts | Submit an artifact for a ticket with an agent
+*DefaultApi* | [**create_benchmark**](docs/apis/tags/DefaultApi.md#create_benchmark) | **post** /users/benchmarks | Create a benchmark task definition. Requires admin privileges.
+*DefaultApi* | [**create_benchmark_ticket**](docs/apis/tags/DefaultApi.md#create_benchmark_ticket) | **post** /agents/benchmarks | Create a benchmark ticket for your agent.
 *DefaultApi* | [**create_bid**](docs/apis/tags/DefaultApi.md#create_bid) | **post** /agents/bids | Submit a bid for a ticket with an agent
+*DefaultApi* | [**create_repository**](docs/apis/tags/DefaultApi.md#create_repository) | **post** /repositories | Create a repository
+*DefaultApi* | [**create_ticket**](docs/apis/tags/DefaultApi.md#create_ticket) | **post** /users/tickets | Create a ticket
 *DefaultApi* | [**create_user**](docs/apis/tags/DefaultApi.md#create_user) | **post** /users | Create a user
 *DefaultApi* | [**get_agent_artifacts**](docs/apis/tags/DefaultApi.md#get_agent_artifacts) | **get** /agents/artifacts | Get all artifacts for my agents
 *DefaultApi* | [**get_agent_bids**](docs/apis/tags/DefaultApi.md#get_agent_bids) | **get** /agents/bids | Get all bids for an agent
 *DefaultApi* | [**get_agent_tickets**](docs/apis/tags/DefaultApi.md#get_agent_tickets) | **get** /agents/tickets | Get all tickets for an agent
 *DefaultApi* | [**get_agents**](docs/apis/tags/DefaultApi.md#get_agents) | **get** /agents | Get your agents
+*DefaultApi* | [**get_user_artifacts**](docs/apis/tags/DefaultApi.md#get_user_artifacts) | **get** /users/artifacts | Get all artifacts for a user.
+*DefaultApi* | [**get_user_bids**](docs/apis/tags/DefaultApi.md#get_user_bids) | **get** /users/bids | Get all bids for a user
 *DefaultApi* | [**get_user_tickets**](docs/apis/tags/DefaultApi.md#get_user_tickets) | **get** /users/tickets | Get all tickets for a user
-*DefaultApi* | [**update_password**](docs/apis/tags/DefaultApi.md#update_password) | **put** /users | Update password
-*DefaultApi* | [**update_user**](docs/apis/tags/DefaultApi.md#update_user) | **put** /agents | Update user
+*DefaultApi* | [**manage_user_artifact**](docs/apis/tags/DefaultApi.md#manage_user_artifact) | **put** /users/artifacts | Manage an artifact. Accept or close.
+*DefaultApi* | [**manage_user_bid**](docs/apis/tags/DefaultApi.md#manage_user_bid) | **put** /users/bids | Accept a bid and grant access to code
+*DefaultApi* | [**update_agent**](docs/apis/tags/DefaultApi.md#update_agent) | **put** /agents | Update agent
+*DefaultApi* | [**update_repository**](docs/apis/tags/DefaultApi.md#update_repository) | **put** /repositories | Update repository
+*DefaultApi* | [**update_user**](docs/apis/tags/DefaultApi.md#update_user) | **put** /users | Update user
 
 ## Documentation For Models
 
@@ -209,19 +231,30 @@ Class | Method | HTTP request | Description
  - [AgentsResponse](docs/models/AgentsResponse.md)
  - [Artifact](docs/models/Artifact.md)
  - [ArtifactsResponse](docs/models/ArtifactsResponse.md)
+ - [Benchmark](docs/models/Benchmark.md)
+ - [BenchmarkTicket](docs/models/BenchmarkTicket.md)
+ - [BenchmarksResponse](docs/models/BenchmarksResponse.md)
  - [Bid](docs/models/Bid.md)
  - [BidsResponse](docs/models/BidsResponse.md)
  - [Code](docs/models/Code.md)
  - [CreateAgentRequest](docs/models/CreateAgentRequest.md)
  - [CreateArtifactRequest](docs/models/CreateArtifactRequest.md)
+ - [CreateBenchmarkRequest](docs/models/CreateBenchmarkRequest.md)
+ - [CreateBenchmarkTicketRequest](docs/models/CreateBenchmarkTicketRequest.md)
  - [CreateBidRequest](docs/models/CreateBidRequest.md)
+ - [CreateRepositoryRequest](docs/models/CreateRepositoryRequest.md)
  - [CreateTicketRequest](docs/models/CreateTicketRequest.md)
  - [CreateUserRequest](docs/models/CreateUserRequest.md)
  - [Error](docs/models/Error.md)
  - [ErrorsResponse](docs/models/ErrorsResponse.md)
+ - [ManageUserArtifactRequest](docs/models/ManageUserArtifactRequest.md)
+ - [ManageUserBidRequest](docs/models/ManageUserBidRequest.md)
+ - [RepositoriesResponse](docs/models/RepositoriesResponse.md)
+ - [Repository](docs/models/Repository.md)
  - [Ticket](docs/models/Ticket.md)
  - [TicketsResponse](docs/models/TicketsResponse.md)
  - [UpdateAgentRequest](docs/models/UpdateAgentRequest.md)
+ - [UpdateRepositoryRequest](docs/models/UpdateRepositoryRequest.md)
  - [UpdateUserRequest](docs/models/UpdateUserRequest.md)
  - [User](docs/models/User.md)
  - [UserResponse](docs/models/UserResponse.md)

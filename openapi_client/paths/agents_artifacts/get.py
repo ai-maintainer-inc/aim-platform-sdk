@@ -57,6 +57,30 @@ class AgentIdSchema(
         )
 
 
+class ArtifactIdSchema(
+    schemas.UUIDBase,
+    schemas.AnyTypeSchema,
+):
+
+
+    class MetaOapg:
+        format = 'uuid'
+
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'ArtifactIdSchema':
+        return super().__new__(
+            cls,
+            *_args,
+            _configuration=_configuration,
+            **kwargs,
+        )
+
+
 class TicketIdSchema(
     schemas.UUIDBase,
     schemas.AnyTypeSchema,
@@ -97,6 +121,50 @@ class BidIdSchema(
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'BidIdSchema':
+        return super().__new__(
+            cls,
+            *_args,
+            _configuration=_configuration,
+            **kwargs,
+        )
+
+
+class StatusSchema(
+    schemas.AnyTypeSchema,
+):
+
+
+    class MetaOapg:
+        enum_value_to_name = {
+            "draft": "DRAFT",
+            "accepted": "ACCEPTED",
+            "closed": "CLOSED",
+            "pending": "PENDING",
+        }
+    
+    @schemas.classproperty
+    def DRAFT(cls):
+        return cls("draft")
+    
+    @schemas.classproperty
+    def ACCEPTED(cls):
+        return cls("accepted")
+    
+    @schemas.classproperty
+    def CLOSED(cls):
+        return cls("closed")
+    
+    @schemas.classproperty
+    def PENDING(cls):
+        return cls("pending")
+
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'StatusSchema':
         return super().__new__(
             cls,
             *_args,
@@ -201,14 +269,16 @@ class AfterSchema(
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
+        'agentId': typing.Union[AgentIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
     }
 )
 RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
-        'agentId': typing.Union[AgentIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        'artifactId': typing.Union[ArtifactIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'ticketId': typing.Union[TicketIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'bidId': typing.Union[BidIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        'status': typing.Union[StatusSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'pageSize': typing.Union[PageSizeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'page': typing.Union[PageSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'before': typing.Union[BeforeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
@@ -226,6 +296,13 @@ request_query_agent_id = api_client.QueryParameter(
     name="agentId",
     style=api_client.ParameterStyle.FORM,
     schema=AgentIdSchema,
+    required=True,
+    explode=True,
+)
+request_query_artifact_id = api_client.QueryParameter(
+    name="artifactId",
+    style=api_client.ParameterStyle.FORM,
+    schema=ArtifactIdSchema,
     explode=True,
 )
 request_query_ticket_id = api_client.QueryParameter(
@@ -238,6 +315,12 @@ request_query_bid_id = api_client.QueryParameter(
     name="bidId",
     style=api_client.ParameterStyle.FORM,
     schema=BidIdSchema,
+    explode=True,
+)
+request_query_status = api_client.QueryParameter(
+    name="status",
+    style=api_client.ParameterStyle.FORM,
+    schema=StatusSchema,
     explode=True,
 )
 request_query_page_size = api_client.QueryParameter(
@@ -407,8 +490,10 @@ class BaseApi(api_client.Api):
         prefix_separator_iterator = None
         for parameter in (
             request_query_agent_id,
+            request_query_artifact_id,
             request_query_ticket_id,
             request_query_bid_id,
+            request_query_status,
             request_query_page_size,
             request_query_page,
             request_query_before,

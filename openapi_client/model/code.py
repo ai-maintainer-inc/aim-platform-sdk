@@ -30,6 +30,8 @@ class Code(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    Information about where to find the code associated with a ticket or artifact.
     """
 
 

@@ -34,15 +34,48 @@ class UpdateAgentRequest(
 
 
     class MetaOapg:
+        required = {
+            "agentId",
+        }
         
         class properties:
+            
+            
+            class agentId(
+                schemas.UUIDBase,
+                schemas.AnyTypeSchema,
+            ):
+            
+            
+                class MetaOapg:
+                    format = 'uuid'
+            
+            
+                def __new__(
+                    cls,
+                    *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    _configuration: typing.Optional[schemas.Configuration] = None,
+                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+                ) -> 'agentId':
+                    return super().__new__(
+                        cls,
+                        *_args,
+                        _configuration=_configuration,
+                        **kwargs,
+                    )
             webhookUrl = schemas.AnyTypeSchema
             webhookSecret = schemas.AnyTypeSchema
             __annotations__ = {
+                "agentId": agentId,
                 "webhookUrl": webhookUrl,
                 "webhookSecret": webhookSecret,
             }
 
+    
+    agentId: MetaOapg.properties.agentId
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["agentId"]) -> MetaOapg.properties.agentId: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["webhookUrl"]) -> MetaOapg.properties.webhookUrl: ...
@@ -53,10 +86,13 @@ class UpdateAgentRequest(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["webhookUrl", "webhookSecret", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["agentId", "webhookUrl", "webhookSecret", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["agentId"]) -> MetaOapg.properties.agentId: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["webhookUrl"]) -> typing.Union[MetaOapg.properties.webhookUrl, schemas.Unset]: ...
@@ -67,13 +103,14 @@ class UpdateAgentRequest(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["webhookUrl", "webhookSecret", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["agentId", "webhookUrl", "webhookSecret", ], str]):
         return super().get_item_oapg(name)
     
 
     def __new__(
         cls,
         *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        agentId: typing.Union[MetaOapg.properties.agentId, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         webhookUrl: typing.Union[MetaOapg.properties.webhookUrl, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
         webhookSecret: typing.Union[MetaOapg.properties.webhookSecret, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -82,6 +119,7 @@ class UpdateAgentRequest(
         return super().__new__(
             cls,
             *_args,
+            agentId=agentId,
             webhookUrl=webhookUrl,
             webhookSecret=webhookSecret,
             _configuration=_configuration,

@@ -25,15 +25,15 @@ import frozendict  # noqa: F401
 
 from openapi_client import schemas  # noqa: F401
 
-from openapi_client.model.update_user_request import UpdateUserRequest
+from openapi_client.model.update_agent_request import UpdateAgentRequest
 from openapi_client.model.agent import Agent
 from openapi_client.model.errors_response import ErrorsResponse
 
 # body param
-SchemaForRequestBodyApplicationJson = UpdateUserRequest
+SchemaForRequestBodyApplicationJson = UpdateAgentRequest
 
 
-request_body_update_user_request = api_client.RequestBody(
+request_body_update_agent_request = api_client.RequestBody(
     content={
         'application/json': api_client.MediaType(
             schema=SchemaForRequestBodyApplicationJson),
@@ -114,7 +114,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _update_user_oapg(
+    def _update_agent_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: typing_extensions.Literal["application/json"] = ...,
@@ -128,7 +128,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _update_user_oapg(
+    def _update_agent_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = ...,
@@ -143,7 +143,7 @@ class BaseApi(api_client.Api):
 
 
     @typing.overload
-    def _update_user_oapg(
+    def _update_agent_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         skip_deserialization: typing_extensions.Literal[True],
@@ -154,7 +154,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _update_user_oapg(
+    def _update_agent_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = ...,
@@ -168,7 +168,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _update_user_oapg(
+    def _update_agent_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = 'application/json',
@@ -178,7 +178,7 @@ class BaseApi(api_client.Api):
         skip_deserialization: bool = False,
     ):
         """
-        Update user
+        Update agent
         :param skip_deserialization: If true then api_response.response will be set but
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
@@ -196,7 +196,7 @@ class BaseApi(api_client.Api):
                 'The required body parameter has an invalid value of: unset. Set a valid value instead')
         _fields = None
         _body = None
-        serialized_data = request_body_update_user_request.serialize(body, content_type)
+        serialized_data = request_body_update_agent_request.serialize(body, content_type)
         _headers.add('Content-Type', content_type)
         if 'fields' in serialized_data:
             _fields = serialized_data['fields']
@@ -236,11 +236,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class UpdateUser(BaseApi):
+class UpdateAgent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def update_user(
+    def update_agent(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: typing_extensions.Literal["application/json"] = ...,
@@ -254,7 +254,7 @@ class UpdateUser(BaseApi):
     ]: ...
 
     @typing.overload
-    def update_user(
+    def update_agent(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = ...,
@@ -269,7 +269,7 @@ class UpdateUser(BaseApi):
 
 
     @typing.overload
-    def update_user(
+    def update_agent(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         skip_deserialization: typing_extensions.Literal[True],
@@ -280,7 +280,7 @@ class UpdateUser(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def update_user(
+    def update_agent(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = ...,
@@ -294,7 +294,7 @@ class UpdateUser(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def update_user(
+    def update_agent(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
         content_type: str = 'application/json',
@@ -303,7 +303,7 @@ class UpdateUser(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._update_user_oapg(
+        return self._update_agent_oapg(
             body=body,
             content_type=content_type,
             accept_content_types=accept_content_types,
@@ -380,7 +380,7 @@ class ApiForput(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._update_user_oapg(
+        return self._update_agent_oapg(
             body=body,
             content_type=content_type,
             accept_content_types=accept_content_types,

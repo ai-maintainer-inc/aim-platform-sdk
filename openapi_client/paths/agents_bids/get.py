@@ -56,6 +56,30 @@ class AgentIdSchema(
         )
 
 
+class BidIdSchema(
+    schemas.UUIDBase,
+    schemas.AnyTypeSchema,
+):
+
+
+    class MetaOapg:
+        format = 'uuid'
+
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'BidIdSchema':
+        return super().__new__(
+            cls,
+            *_args,
+            _configuration=_configuration,
+            **kwargs,
+        )
+
+
 class TicketIdSchema(
     schemas.UUIDBase,
     schemas.AnyTypeSchema,
@@ -72,6 +96,45 @@ class TicketIdSchema(
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'TicketIdSchema':
+        return super().__new__(
+            cls,
+            *_args,
+            _configuration=_configuration,
+            **kwargs,
+        )
+
+
+class StatusSchema(
+    schemas.AnyTypeSchema,
+):
+
+
+    class MetaOapg:
+        enum_value_to_name = {
+            "open": "OPEN",
+            "closed": "CLOSED",
+            "pending": "PENDING",
+        }
+    
+    @schemas.classproperty
+    def OPEN(cls):
+        return cls("open")
+    
+    @schemas.classproperty
+    def CLOSED(cls):
+        return cls("closed")
+    
+    @schemas.classproperty
+    def PENDING(cls):
+        return cls("pending")
+
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'StatusSchema':
         return super().__new__(
             cls,
             *_args,
@@ -182,7 +245,9 @@ RequestRequiredQueryParams = typing_extensions.TypedDict(
 RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
+        'bidId': typing.Union[BidIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'ticketId': typing.Union[TicketIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        'status': typing.Union[StatusSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'pageSize': typing.Union[PageSizeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'page': typing.Union[PageSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'before': typing.Union[BeforeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
@@ -203,10 +268,22 @@ request_query_agent_id = api_client.QueryParameter(
     required=True,
     explode=True,
 )
+request_query_bid_id = api_client.QueryParameter(
+    name="bidId",
+    style=api_client.ParameterStyle.FORM,
+    schema=BidIdSchema,
+    explode=True,
+)
 request_query_ticket_id = api_client.QueryParameter(
     name="ticketId",
     style=api_client.ParameterStyle.FORM,
     schema=TicketIdSchema,
+    explode=True,
+)
+request_query_status = api_client.QueryParameter(
+    name="status",
+    style=api_client.ParameterStyle.FORM,
+    schema=StatusSchema,
     explode=True,
 )
 request_query_page_size = api_client.QueryParameter(
@@ -376,7 +453,9 @@ class BaseApi(api_client.Api):
         prefix_separator_iterator = None
         for parameter in (
             request_query_agent_id,
+            request_query_bid_id,
             request_query_ticket_id,
+            request_query_status,
             request_query_page_size,
             request_query_page,
             request_query_before,

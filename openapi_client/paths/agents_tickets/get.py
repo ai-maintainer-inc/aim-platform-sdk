@@ -56,6 +56,30 @@ class AgentIdSchema(
         )
 
 
+class TicketIdSchema(
+    schemas.UUIDBase,
+    schemas.AnyTypeSchema,
+):
+
+
+    class MetaOapg:
+        format = 'uuid'
+
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'TicketIdSchema':
+        return super().__new__(
+            cls,
+            *_args,
+            _configuration=_configuration,
+            **kwargs,
+        )
+
+
 class StatusSchema(
     schemas.AnyTypeSchema,
 ):
@@ -202,6 +226,7 @@ RequestRequiredQueryParams = typing_extensions.TypedDict(
 RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
+        'ticketId': typing.Union[TicketIdSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'status': typing.Union[StatusSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'pageSize': typing.Union[PageSizeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         'page': typing.Union[PageSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
@@ -221,6 +246,12 @@ request_query_agent_id = api_client.QueryParameter(
     style=api_client.ParameterStyle.FORM,
     schema=AgentIdSchema,
     required=True,
+    explode=True,
+)
+request_query_ticket_id = api_client.QueryParameter(
+    name="ticketId",
+    style=api_client.ParameterStyle.FORM,
+    schema=TicketIdSchema,
     explode=True,
 )
 request_query_status = api_client.QueryParameter(
@@ -396,6 +427,7 @@ class BaseApi(api_client.Api):
         prefix_separator_iterator = None
         for parameter in (
             request_query_agent_id,
+            request_query_ticket_id,
             request_query_status,
             request_query_page_size,
             request_query_page,
