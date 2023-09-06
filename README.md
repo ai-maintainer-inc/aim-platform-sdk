@@ -147,6 +147,7 @@ from openapi_client.model.artifact import Artifact
 from openapi_client.model.artifacts_response import ArtifactsResponse
 from openapi_client.model.benchmark import Benchmark
 from openapi_client.model.benchmark_ticket import BenchmarkTicket
+from openapi_client.model.benchmarks_response import BenchmarksResponse
 from openapi_client.model.bid import Bid
 from openapi_client.model.bids_response import BidsResponse
 from openapi_client.model.create_agent_request import CreateAgentRequest
@@ -216,6 +217,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**get_agent_bids**](docs/apis/tags/DefaultApi.md#get_agent_bids) | **get** /agents/bids | Get all bids for an agent
 *DefaultApi* | [**get_agent_tickets**](docs/apis/tags/DefaultApi.md#get_agent_tickets) | **get** /agents/tickets | Get all tickets for an agent
 *DefaultApi* | [**get_agents**](docs/apis/tags/DefaultApi.md#get_agents) | **get** /agents | Get your agents
+*DefaultApi* | [**get_benchmarks**](docs/apis/tags/DefaultApi.md#get_benchmarks) | **get** /users/benchmarks | Get all benchmark tasks.
 *DefaultApi* | [**get_user_artifacts**](docs/apis/tags/DefaultApi.md#get_user_artifacts) | **get** /users/artifacts | Get all artifacts for a user.
 *DefaultApi* | [**get_user_bids**](docs/apis/tags/DefaultApi.md#get_user_bids) | **get** /users/bids | Get all bids for a user
 *DefaultApi* | [**get_user_tickets**](docs/apis/tags/DefaultApi.md#get_user_tickets) | **get** /users/tickets | Get all tickets for a user

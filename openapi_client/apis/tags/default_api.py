@@ -21,6 +21,7 @@ from openapi_client.paths.agents_artifacts.get import GetAgentArtifacts
 from openapi_client.paths.agents_bids.get import GetAgentBids
 from openapi_client.paths.agents_tickets.get import GetAgentTickets
 from openapi_client.paths.agents.get import GetAgents
+from openapi_client.paths.users_benchmarks.get import GetBenchmarks
 from openapi_client.paths.users_artifacts.get import GetUserArtifacts
 from openapi_client.paths.users_bids.get import GetUserBids
 from openapi_client.paths.users_tickets.get import GetUserTickets
@@ -44,6 +45,7 @@ class DefaultApi(
     GetAgentBids,
     GetAgentTickets,
     GetAgents,
+    GetBenchmarks,
     GetUserArtifacts,
     GetUserBids,
     GetUserTickets,
