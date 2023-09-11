@@ -20,7 +20,7 @@ import json
 
 
 from pydantic import BaseModel, Field
-from openapi_client.models.user import User
+from aim_platform_sdk.models.user import User
 
 class UserResponse(BaseModel):
     """

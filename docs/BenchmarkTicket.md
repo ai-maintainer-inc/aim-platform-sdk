@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.benchmark_ticket import BenchmarkTicket
+from aim_platform_sdk.models.benchmark_ticket import BenchmarkTicket
 
 # TODO update the JSON string below
 json = "{}"

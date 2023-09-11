@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_repository_request import CreateRepositoryRequest
+from aim_platform_sdk.models.create_repository_request import CreateRepositoryRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_benchmark_request import CreateBenchmarkRequest
+from aim_platform_sdk.models.create_benchmark_request import CreateBenchmarkRequest
 
 # TODO update the JSON string below
 json = "{}"

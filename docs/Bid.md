@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bid import Bid
+from aim_platform_sdk.models.bid import Bid
 
 # TODO update the JSON string below
 json = "{}"

@@ -23,36 +23,36 @@ from pydantic import Field
 
 from typing import Any, Optional
 
-from openapi_client.models.agent import Agent
-from openapi_client.models.agents_response import AgentsResponse
-from openapi_client.models.artifact import Artifact
-from openapi_client.models.artifacts_response import ArtifactsResponse
-from openapi_client.models.benchmark import Benchmark
-from openapi_client.models.benchmark_ticket import BenchmarkTicket
-from openapi_client.models.benchmarks_response import BenchmarksResponse
-from openapi_client.models.bid import Bid
-from openapi_client.models.bids_response import BidsResponse
-from openapi_client.models.create_agent_request import CreateAgentRequest
-from openapi_client.models.create_artifact_request import CreateArtifactRequest
-from openapi_client.models.create_benchmark_request import CreateBenchmarkRequest
-from openapi_client.models.create_benchmark_ticket_request import CreateBenchmarkTicketRequest
-from openapi_client.models.create_bid_request import CreateBidRequest
-from openapi_client.models.create_repository_request import CreateRepositoryRequest
-from openapi_client.models.create_ticket_request import CreateTicketRequest
-from openapi_client.models.create_user_request import CreateUserRequest
-from openapi_client.models.manage_user_artifact_request import ManageUserArtifactRequest
-from openapi_client.models.manage_user_bid_request import ManageUserBidRequest
-from openapi_client.models.repository import Repository
-from openapi_client.models.ticket import Ticket
-from openapi_client.models.tickets_response import TicketsResponse
-from openapi_client.models.update_agent_request import UpdateAgentRequest
-from openapi_client.models.update_repository_request import UpdateRepositoryRequest
-from openapi_client.models.update_user_request import UpdateUserRequest
-from openapi_client.models.user import User
+from aim_platform_sdk.models.agent import Agent
+from aim_platform_sdk.models.agents_response import AgentsResponse
+from aim_platform_sdk.models.artifact import Artifact
+from aim_platform_sdk.models.artifacts_response import ArtifactsResponse
+from aim_platform_sdk.models.benchmark import Benchmark
+from aim_platform_sdk.models.benchmark_ticket import BenchmarkTicket
+from aim_platform_sdk.models.benchmarks_response import BenchmarksResponse
+from aim_platform_sdk.models.bid import Bid
+from aim_platform_sdk.models.bids_response import BidsResponse
+from aim_platform_sdk.models.create_agent_request import CreateAgentRequest
+from aim_platform_sdk.models.create_artifact_request import CreateArtifactRequest
+from aim_platform_sdk.models.create_benchmark_request import CreateBenchmarkRequest
+from aim_platform_sdk.models.create_benchmark_ticket_request import CreateBenchmarkTicketRequest
+from aim_platform_sdk.models.create_bid_request import CreateBidRequest
+from aim_platform_sdk.models.create_repository_request import CreateRepositoryRequest
+from aim_platform_sdk.models.create_ticket_request import CreateTicketRequest
+from aim_platform_sdk.models.create_user_request import CreateUserRequest
+from aim_platform_sdk.models.manage_user_artifact_request import ManageUserArtifactRequest
+from aim_platform_sdk.models.manage_user_bid_request import ManageUserBidRequest
+from aim_platform_sdk.models.repository import Repository
+from aim_platform_sdk.models.ticket import Ticket
+from aim_platform_sdk.models.tickets_response import TicketsResponse
+from aim_platform_sdk.models.update_agent_request import UpdateAgentRequest
+from aim_platform_sdk.models.update_repository_request import UpdateRepositoryRequest
+from aim_platform_sdk.models.update_user_request import UpdateUserRequest
+from aim_platform_sdk.models.user import User
 
-from openapi_client.api_client import ApiClient
-from openapi_client.api_response import ApiResponse
-from openapi_client.exceptions import (  # noqa: F401
+from aim_platform_sdk.api_client import ApiClient
+from aim_platform_sdk.api_response import ApiResponse
+from aim_platform_sdk.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.benchmarks_response import BenchmarksResponse
+from aim_platform_sdk.models.benchmarks_response import BenchmarksResponse
 
 # TODO update the JSON string below
 json = "{}"

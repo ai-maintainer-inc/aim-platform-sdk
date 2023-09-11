@@ -24,11 +24,11 @@ import tempfile
 
 from urllib.parse import quote
 
-from openapi_client.configuration import Configuration
-from openapi_client.api_response import ApiResponse
-import openapi_client.models
-from openapi_client import rest
-from openapi_client.exceptions import ApiValueError, ApiException
+from aim_platform_sdk.configuration import Configuration
+from aim_platform_sdk.api_response import ApiResponse
+import aim_platform_sdk.models
+from aim_platform_sdk import rest
+from aim_platform_sdk.exceptions import ApiValueError, ApiException
 
 
 class ApiClient(object):
@@ -341,7 +341,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(openapi_client.models, klass)
+                klass = getattr(aim_platform_sdk.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

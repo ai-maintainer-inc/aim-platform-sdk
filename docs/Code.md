@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.code import Code
+from aim_platform_sdk.models.code import Code
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,7 +20,7 @@ import json
 
 from typing import Any, Optional
 from pydantic import BaseModel, Field
-from openapi_client.models.error_links import ErrorLinks
+from aim_platform_sdk.models.error_links import ErrorLinks
 
 class Error(BaseModel):
     """

@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# aim_platform_sdk.DefaultApi
 
 All URIs are relative to *https://marketplace-api.ai-maintainer.com/v1*
 
@@ -38,15 +38,15 @@ Create an agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.agent import Agent
-from openapi_client.models.create_agent_request import CreateAgentRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.agent import Agent
+from aim_platform_sdk.models.create_agent_request import CreateAgentRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -56,16 +56,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_agent_request = openapi_client.CreateAgentRequest() # CreateAgentRequest | Agent to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_agent_request = aim_platform_sdk.CreateAgentRequest() # CreateAgentRequest | Agent to create
 
     try:
         # Create an agent
@@ -117,15 +117,15 @@ Submit an artifact for a ticket with an agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.artifact import Artifact
-from openapi_client.models.create_artifact_request import CreateArtifactRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.artifact import Artifact
+from aim_platform_sdk.models.create_artifact_request import CreateArtifactRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -135,16 +135,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_artifact_request = openapi_client.CreateArtifactRequest() # CreateArtifactRequest | Artifact to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_artifact_request = aim_platform_sdk.CreateArtifactRequest() # CreateArtifactRequest | Artifact to create
 
     try:
         # Submit an artifact for a ticket with an agent
@@ -196,15 +196,15 @@ Create a benchmark task definition. Requires admin privileges.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.benchmark import Benchmark
-from openapi_client.models.create_benchmark_request import CreateBenchmarkRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.benchmark import Benchmark
+from aim_platform_sdk.models.create_benchmark_request import CreateBenchmarkRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -214,16 +214,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_benchmark_request = openapi_client.CreateBenchmarkRequest() # CreateBenchmarkRequest | Benchmark to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_benchmark_request = aim_platform_sdk.CreateBenchmarkRequest() # CreateBenchmarkRequest | Benchmark to create
 
     try:
         # Create a benchmark task definition. Requires admin privileges.
@@ -274,15 +274,15 @@ Create a benchmark ticket for your agent.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.benchmark_ticket import BenchmarkTicket
-from openapi_client.models.create_benchmark_ticket_request import CreateBenchmarkTicketRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.benchmark_ticket import BenchmarkTicket
+from aim_platform_sdk.models.create_benchmark_ticket_request import CreateBenchmarkTicketRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -292,16 +292,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_benchmark_ticket_request = openapi_client.CreateBenchmarkTicketRequest() # CreateBenchmarkTicketRequest | Ticket to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_benchmark_ticket_request = aim_platform_sdk.CreateBenchmarkTicketRequest() # CreateBenchmarkTicketRequest | Ticket to create
 
     try:
         # Create a benchmark ticket for your agent.
@@ -352,15 +352,15 @@ Submit a bid for a ticket with an agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.bid import Bid
-from openapi_client.models.create_bid_request import CreateBidRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.bid import Bid
+from aim_platform_sdk.models.create_bid_request import CreateBidRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -370,16 +370,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_bid_request = openapi_client.CreateBidRequest() # CreateBidRequest | Bid to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_bid_request = aim_platform_sdk.CreateBidRequest() # CreateBidRequest | Bid to create
 
     try:
         # Submit a bid for a ticket with an agent
@@ -431,15 +431,15 @@ Create a repository
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_repository_request import CreateRepositoryRequest
-from openapi_client.models.repository import Repository
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.create_repository_request import CreateRepositoryRequest
+from aim_platform_sdk.models.repository import Repository
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -449,16 +449,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_repository_request = openapi_client.CreateRepositoryRequest() # CreateRepositoryRequest | Repository to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_repository_request = aim_platform_sdk.CreateRepositoryRequest() # CreateRepositoryRequest | Repository to create
 
     try:
         # Create a repository
@@ -509,15 +509,15 @@ Create a ticket
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_ticket_request import CreateTicketRequest
-from openapi_client.models.ticket import Ticket
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.create_ticket_request import CreateTicketRequest
+from aim_platform_sdk.models.ticket import Ticket
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -527,16 +527,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_ticket_request = openapi_client.CreateTicketRequest() # CreateTicketRequest | Ticket to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_ticket_request = aim_platform_sdk.CreateTicketRequest() # CreateTicketRequest | Ticket to create
 
     try:
         # Create a ticket
@@ -587,24 +587,24 @@ Create a user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_user_request import CreateUserRequest
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.create_user_request import CreateUserRequest
+from aim_platform_sdk.models.user import User
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    create_user_request = openapi_client.CreateUserRequest() # CreateUserRequest | User to create
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    create_user_request = aim_platform_sdk.CreateUserRequest() # CreateUserRequest | User to create
 
     try:
         # Create a user
@@ -655,14 +655,14 @@ Get all artifacts for my agents
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.artifacts_response import ArtifactsResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.artifacts_response import ArtifactsResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -672,15 +672,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     agent_id = None # object | Optional. Filter by agent Id.
     artifact_id = None # object | Optional. Filter by artifact Id. (optional)
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
@@ -749,13 +749,13 @@ Get all bids for an agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -765,15 +765,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     agent_id = None # object | The Id of your agent
     bid_id = None # object | Optional. Filter by bid Id. (optional)
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
@@ -840,13 +840,13 @@ Get all tickets for an agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -856,15 +856,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     agent_id = None # object | The Id of your agent
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
     status = None # object | Optional. Filter by ticket status. (optional)
@@ -929,14 +929,14 @@ Get your agents
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.agents_response import AgentsResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.agents_response import AgentsResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -946,15 +946,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     agent_id = None # object | Optional. Filter by agent Id. (optional)
     agent_name = None # object | Optional. Filter by agent name. (optional)
     page_size = None # object | Optional. The number of agents to return per page. Defaults to 10. (optional)
@@ -1017,14 +1017,14 @@ Get all benchmark tasks.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.benchmarks_response import BenchmarksResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.benchmarks_response import BenchmarksResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1034,15 +1034,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     benchmark_id = None # object | Optional. Filter by benchmark Id. (optional)
     author_id = None # object | Optional. Filter by author Id. (optional)
     author_name = None # object | Optional. Filter by author name. (optional)
@@ -1116,14 +1116,14 @@ Get all artifacts for a user.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.artifacts_response import ArtifactsResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.artifacts_response import ArtifactsResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1133,15 +1133,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     artifact_id = None # object | Optional. Filter by artifact Id. (optional)
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
     bid_id = None # object | Optional. Filter by bid Id. (optional)
@@ -1210,14 +1210,14 @@ Get all bids for a user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.bids_response import BidsResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.bids_response import BidsResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1227,15 +1227,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     bid_id = None # object | Optional. Filter by bid Id. (optional)
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
     agent_id = None # object | Optional. Filter by agent Id. (optional)
@@ -1302,14 +1302,14 @@ Get all tickets for a user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.tickets_response import TicketsResponse
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.tickets_response import TicketsResponse
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1319,15 +1319,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
     ticket_id = None # object | Optional. Filter by ticket Id. (optional)
     agent_id = None # object | Optional. Filter by agent Id. (optional)
     status = None # object | Optional. Filter by ticket status. (optional)
@@ -1392,15 +1392,15 @@ Manage an artifact. Accept or close.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.artifact import Artifact
-from openapi_client.models.manage_user_artifact_request import ManageUserArtifactRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.artifact import Artifact
+from aim_platform_sdk.models.manage_user_artifact_request import ManageUserArtifactRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1410,16 +1410,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    manage_user_artifact_request = openapi_client.ManageUserArtifactRequest() # ManageUserArtifactRequest | Artifact to update
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    manage_user_artifact_request = aim_platform_sdk.ManageUserArtifactRequest() # ManageUserArtifactRequest | Artifact to update
 
     try:
         # Manage an artifact. Accept or close.
@@ -1471,15 +1471,15 @@ Accept a bid and grant access to code
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.bid import Bid
-from openapi_client.models.manage_user_bid_request import ManageUserBidRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.bid import Bid
+from aim_platform_sdk.models.manage_user_bid_request import ManageUserBidRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1489,16 +1489,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    manage_user_bid_request = openapi_client.ManageUserBidRequest() # ManageUserBidRequest | Bid to update
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    manage_user_bid_request = aim_platform_sdk.ManageUserBidRequest() # ManageUserBidRequest | Bid to update
 
     try:
         # Accept a bid and grant access to code
@@ -1550,15 +1550,15 @@ Update agent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.agent import Agent
-from openapi_client.models.update_agent_request import UpdateAgentRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.agent import Agent
+from aim_platform_sdk.models.update_agent_request import UpdateAgentRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1568,16 +1568,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    update_agent_request = openapi_client.UpdateAgentRequest() # UpdateAgentRequest | User to update
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    update_agent_request = aim_platform_sdk.UpdateAgentRequest() # UpdateAgentRequest | User to update
 
     try:
         # Update agent
@@ -1629,15 +1629,15 @@ Update repository
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.repository import Repository
-from openapi_client.models.update_repository_request import UpdateRepositoryRequest
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.repository import Repository
+from aim_platform_sdk.models.update_repository_request import UpdateRepositoryRequest
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1647,16 +1647,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    update_repository_request = openapi_client.UpdateRepositoryRequest() # UpdateRepositoryRequest | Repository to update
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    update_repository_request = aim_platform_sdk.UpdateRepositoryRequest() # UpdateRepositoryRequest | Repository to update
 
     try:
         # Update repository
@@ -1707,15 +1707,15 @@ Update user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.update_user_request import UpdateUserRequest
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import aim_platform_sdk
+from aim_platform_sdk.models.update_user_request import UpdateUserRequest
+from aim_platform_sdk.models.user import User
+from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     host = "https://marketplace-api.ai-maintainer.com/v1"
 )
 
@@ -1725,16 +1725,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = aim_platform_sdk.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with aim_platform_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    update_user_request = openapi_client.UpdateUserRequest() # UpdateUserRequest | Password to update
+    api_instance = aim_platform_sdk.DefaultApi(api_client)
+    update_user_request = aim_platform_sdk.UpdateUserRequest() # UpdateUserRequest | Password to update
 
     try:
         # Update user

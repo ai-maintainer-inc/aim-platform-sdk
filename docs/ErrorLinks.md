@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.error_links import ErrorLinks
+from aim_platform_sdk.models.error_links import ErrorLinks
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_artifact_request import CreateArtifactRequest
+from aim_platform_sdk.models.create_artifact_request import CreateArtifactRequest
 
 # TODO update the JSON string below
 json = "{}"

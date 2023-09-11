@@ -20,7 +20,7 @@ import json
 
 from typing import Any, Optional
 from pydantic import BaseModel, Field
-from openapi_client.models.code import Code
+from aim_platform_sdk.models.code import Code
 
 class CreateTicketRequest(BaseModel):
     """

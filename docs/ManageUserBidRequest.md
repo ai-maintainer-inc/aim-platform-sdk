@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.manage_user_bid_request import ManageUserBidRequest
+from aim_platform_sdk.models.manage_user_bid_request import ManageUserBidRequest
 
 # TODO update the JSON string below
 json = "{}"

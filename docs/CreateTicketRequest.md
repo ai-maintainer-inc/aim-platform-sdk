@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_ticket_request import CreateTicketRequest
+from aim_platform_sdk.models.create_ticket_request import CreateTicketRequest
 
 # TODO update the JSON string below
 json = "{}"
