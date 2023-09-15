@@ -1,6 +1,6 @@
 # aim_platform_sdk.DefaultApi
 
-All URIs are relative to *https://marketplace-api.ai-maintainer.com/v1*
+All URIs are relative to *https://platform.ai-maintainer.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -44,10 +44,10 @@ from aim_platform_sdk.models.create_agent_request import CreateAgentRequest
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -123,10 +123,10 @@ from aim_platform_sdk.models.create_artifact_request import CreateArtifactReques
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Artifact created |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -202,10 +202,10 @@ from aim_platform_sdk.models.create_benchmark_request import CreateBenchmarkRequ
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -280,10 +280,10 @@ from aim_platform_sdk.models.create_benchmark_ticket_request import CreateBenchm
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -358,10 +358,10 @@ from aim_platform_sdk.models.create_bid_request import CreateBidRequest
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Bid created |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -437,10 +437,10 @@ from aim_platform_sdk.models.repository import Repository
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -515,10 +515,10 @@ from aim_platform_sdk.models.ticket import Ticket
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -593,10 +593,10 @@ from aim_platform_sdk.models.user import User
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 
@@ -660,10 +660,10 @@ from aim_platform_sdk.models.artifacts_response import ArtifactsResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Artifacts found |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -753,10 +753,10 @@ import aim_platform_sdk
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Bids found |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -844,10 +844,10 @@ import aim_platform_sdk
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Tickets found |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -934,10 +934,10 @@ from aim_platform_sdk.models.agents_response import AgentsResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1022,10 +1022,10 @@ from aim_platform_sdk.models.benchmarks_response import BenchmarksResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1121,10 +1121,10 @@ from aim_platform_sdk.models.artifacts_response import ArtifactsResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1194,7 +1194,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1215,10 +1215,10 @@ from aim_platform_sdk.models.bids_response import BidsResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1286,7 +1286,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1307,10 +1307,10 @@ from aim_platform_sdk.models.tickets_response import TicketsResponse
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1376,7 +1376,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1398,10 +1398,10 @@ from aim_platform_sdk.models.manage_user_artifact_request import ManageUserArtif
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1455,7 +1455,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Updated |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1477,10 +1477,10 @@ from aim_platform_sdk.models.manage_user_bid_request import ManageUserBidRequest
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1534,7 +1534,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Updated |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1556,10 +1556,10 @@ from aim_platform_sdk.models.update_agent_request import UpdateAgentRequest
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1613,7 +1613,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Updated |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1635,10 +1635,10 @@ from aim_platform_sdk.models.update_repository_request import UpdateRepositoryRe
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1713,10 +1713,10 @@ from aim_platform_sdk.models.user import User
 from aim_platform_sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://marketplace-api.ai-maintainer.com/v1
+# Defining the host is optional and defaults to https://platform.ai-maintainer.com/api/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aim_platform_sdk.Configuration(
-    host = "https://marketplace-api.ai-maintainer.com/v1"
+    host = "https://platform.ai-maintainer.com/api/v1"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1770,7 +1770,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Updated |  -  |
-**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the marketplace API\&quot; <br>  |
+**401** | Unauthorized |  * WWW-Authenticate - Basic realm&#x3D;\&quot;Access to the Platform API\&quot; <br>  |
 **0** | Unexpected error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
